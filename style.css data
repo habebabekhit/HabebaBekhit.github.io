@@ -1,0 +1,86 @@
+body {
+  font-family: "Comic Sans MS", sans-serif;
+  background: linear-gradient(135deg, #f5a623, #f76b1c, #f44e88);
+  color: #333;
+  margin: 0;
+  padding: 20px;
+}
+
+header {
+  text-align: center;
+  margin-bottom: 20px;
+  color: white;
+}
+
+h1 {
+  font-size: 2.5rem;
+  margin-bottom: 10px;
+}
+
+p {
+  font-size: 1.2rem;
+}
+
+#movies-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 20px;
+}
+
+.movie-card {
+  background-color: #fff;
+  border: 2px solid #f76b1c;
+  border-radius: 15px;
+  padding: 20px;
+  width: 250px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  position: relative;
+  overflow: hidden;
+}
+
+.movie-card:hover {
+  transform: scale(1.05);
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+}
+
+.movie-card h2 {
+  font-size: 1.5rem;
+  color: #f44e88;
+  margin-bottom: 10px;
+}
+
+.movie-card p {
+  margin: 5px 0;
+  font-size: 1rem;
+  color: #333;
+}
+
+.movie-card::before,
+.movie-card::after {
+  content: "";
+  position: absolute;
+  border-radius: 50%;
+  background: rgba(244, 78, 136, 0.4);
+  width: 100px;
+  height: 100px;
+  top: -40px;
+  right: -40px;
+  z-index: 1;
+}
+
+.movie-card::after {
+  background: rgba(247, 107, 28, 0.4);
+  width: 120px;
+  height: 120px;
+  top: auto;
+  bottom: -60px;
+  left: -60px;
+  z-index: 0;
+}
+
+.movie-card p strong {
+  color: #f5a623;
+  font-weight: bold;
+}
